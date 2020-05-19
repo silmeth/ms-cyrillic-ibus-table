@@ -1,0 +1,415 @@
+### File header must not be modified
+### This file must be encoded into UTF-8.
+### This table under WTFPL
+### comments start with ### not single #
+### Derive from the format of SCIM Table, so you can modify the table from
+### scim-tables' table
+SCIM_Generic_Table_Phrase_Library_TEXT
+VERSION_1_0
+
+### Begin Table definition.
+BEGIN_DEFINITION
+
+### License
+LICENSE = WTFPL
+
+### An unique id to distinguish this table among others.
+### Use uuidgen to generate this kind of id.
+UUID = 7406c9d8-5d93-4911-9871-da665e6de075
+
+### A unique number indicates the version of this file.
+### For example the last modified date of this file.
+### This number must be less than 2^32.
+### Just make your table version-able
+SERIAL_NUMBER = 20200518
+
+### ICON can be any format as long as your pygtk can recognized
+### the most widely ones are "png" and "svg", letter one is recommended
+ICON = Cyrillic_letter_Yat.svg
+
+### The symbol to be displayed in IM switchers
+SYMBOL = ѣ
+
+### The default name of this table, this is needed
+NAME = Unofficial Extended Interslavic Cyrillic
+
+### The local names of this table, this is optional
+### NAME.zh_CN = 形码
+### NAME.zh_HK = 形碼
+### NAME.zh_TW = 形碼
+
+### Description
+DESCRIPTION = This is a table for inputting phonetically all Cyrillic Slavic languages, including Interslavic.
+
+### Supported languages of this table
+### sigle "zh_CN" just be recognized as zh_CN,
+### but "zh_CN, zh_HK" or more zh_XX will be recognized as zh;
+### and "en_US, zh_CN" will be just ignored.
+LANGUAGES = other
+
+### The author of this table
+AUTHOR = Benedykt ‘silmeth’ Jaworski <b.jaworski@kofeina.net>
+
+### Prompt string to be displayed in the status area, CN will be replaced by
+### the gettext tools in runtime as 中.
+STATUS_PROMPT = ѣ
+
+### Valid input chars.
+VALID_INPUT_CHARS = .`'"~|aąbcćčdđďeěęfghijklłľmnńňoǫprřsśtťuųvwxyzźżžAĄBCĆČDĎĐEĚĘFGHIJKLĽŁMNŇŃOǪPRŘSŚTŤUŲVWXYZŹŻŽ
+
+### Layout
+LAYOUT = default
+
+### The max number of input keys for every phrase or character.
+MAX_KEY_LENGTH = 4
+
+### Use auto_commit mode as default
+AUTO_COMMIT = TRUE
+
+### The key strokes to commit the convert result to client.
+COMMIT_KEYS = space,Return,dot
+
+### Automatically selects the first phrase when typing
+AUTO_SELECT = TRUE
+
+### If true then the preedit area will be filled up by the current candidate phrase automatically.
+AUTO_FILL = FALSE
+
+### If true then the lookup table will always be shown if there is any candidate phrase.
+### Otherwise the lookup table won't be shown unless the user requires it by moving the preedit caret left.
+ALWAYS_SHOW_LOOKUP = TRUE
+
+### Use full width punctuation by default
+DEF_FULL_WIDTH_PUNCT = FALSE
+### Not use full width letter by default
+DEF_FULL_WIDTH_LETTER = FALSE
+
+### Whether user are allow to define phrase, default is true
+### You have to define the word construction rules below.
+### For input methods which do not input phrases, set this to False
+USER_CAN_DEFINE_PHRASE = FALSE
+
+### Whether support PinYin Mode, default is true.
+### this feature is just for Chinese, set it to False if your IM is not
+### Chinese.
+PINYIN_MODE = FALSE
+
+### If true then the phrases' frequencies will be adjusted dynamically
+### according your using frequency.
+DYNAMIC_ADJUST = TRUE
+
+### Some characters whose frequencies should be fix all the time, e.g. 
+### some punctuations
+### NO_CHECK_CHARS = 
+
+### Rules for constructing user defined phrase
+### "ce" stands for "ci equal", a Chinese English :), means "phrase length
+### equal to", thus ce2 -> phrase length equal to 2; and "ca" means "phrase
+### length equal or above", so ca4 -> phrase length equal or above 4.
+### p21 -> the 1st key of 2nd character in the phrase, and so on.
+### Each rule separate via ";". 
+### Example below is a complete rule-set, 
+### becuase [2,2] ∩ [3,3] ∩ [4,+∞] = [2,+∞], which is the range of length
+### of phrase. This have to be satisfied if you need ibus-table to build up
+### your own inputed phrase via your daily using.
+### RULES = ce2:p11+p12+p21+p22;ce3:p11+p21+p22+p31;ca4:p11+p21+p31+p41
+
+### The key strokes to page up the lookup table.
+PAGE_UP_KEYS = Page_Up,KP_Page_Up
+
+### The key strokes to page down.
+PAGE_DOWN_KEYS = Page_Down,KP_Page_Down
+
+### The key strokes to select candidiate phrases.
+### Usually "1,2,3,4,5,6,7,8,9" but if this conflicts with
+### characters one wants to use for input one can also
+### use something like “F1,F2,F3,F4,F5,F6,F7,F8,F9”
+SELECT_KEYS = 1,2,3,4,5,6,7,8,9
+
+### The default orientation of the candidate list
+### TRUE means the candidate list is vertical, FALSE means it is vertical
+ORIENTATION=TRUE
+
+END_DEFINITION
+
+### Begin Table data.
+### Format of every line whose formated in "input_keys\tphrase\tfreq\n" is an
+### entry.
+### From left to right, the 1st column are the input key combination that you
+### entered via keyboard; the 2nd column are presented character or phrase of
+### the key combination you want; the 3rd column are frequency of the character
+### or phrase.
+BEGIN_TABLE
+A	А	0
+a	а	0
+Ja	Я	0
+ja	я	0
+Ja`	Ꙗ	0
+ja`	ꙗ	0
+|A	Ꙗ	0
+|a	ꙗ	0
+B	Б	0
+b	б	0
+V	В	0
+v	в	0
+G	Г	0
+g	г	0
+G	Г	0
+g	г	0
+H`	Г	0
+h`	г	0
+G`	Ґ	0
+g`	ґ	0
+D	Д	0
+d	д	0
+D.	Д	0
+d.	д	0
+Ď	Дь	0
+ď	дь	0
+Dź	Ђ	0
+dź	ђ	0
+Đ	Ђ	0
+đ	ђ	0
+D`	Ђ	0
+d`	ђ	0
+Dź	Ѓ	0
+dź	ѓ	0
+Đ	Ѓ	0
+đ	ѓ	0
+D`	Ѓ	0
+d`	ѓ	0
+E	Е	0
+e	е	0
+Jo`	Ё	0
+jo`	ё	0
+E`	Э	0
+e`	э	0
+Je	Є	0
+je	є	0
+Ě	Є	0
+ě	є	0
+Je`	Ѣ	0
+je`	ѣ	0
+Ě`	Ѣ	0
+ě`	ѣ	0
+Je`	Ѥ	0
+je`	ѥ	0
+|E	Ѥ	0
+|e	ѥ	0
+Ę	Ѧ	0
+ę	ѧ	0
+E~	Ѧ	0
+e~	ѧ	0
+Ję	Ѩ	0
+ję	ѩ	0
+Je~	Ѩ	0
+je~	ѩ	0
+|Ę	Ѩ	0
+|ę	ѩ	0
+|E~	Ѩ	0
+|e~	ѩ	0
+Ž	Ж	0
+ž	ж	0
+Ż	Ж	0
+ż	ж	0
+Zs	Ж	0
+zs	ж	0
+Zx	Ж	0
+zx	ж	0
+Dz	Дз	0
+dz	дз	0
+Dz`	Ѕ	0
+dz`	ѕ	0
+Z	З	0
+z	з	0
+Z.	З	0
+z.	з	0
+Ź	Зь	0
+ź	зь	0
+I	И	0
+i	и	0
+I	І	0
+i	і	0
+Ji	Ї	0
+ji	ї	0
+J	Й	0
+j	й	0
+J	Ј	0
+j	ј	0
+J.	Й	0
+j.	й	0
+J.	Ј	0
+j.	ј	0
+K	К	0
+k	к	0
+L	Л	0
+l	л	0
+Ł	Л	0
+ł	л	0
+L'	Ль	0
+l'	ль	0
+L'	Љ	0
+l'	љ	0
+Ľ	Ль	0
+ľ	ль	0
+Ľ	Љ	0
+ľ	љ	0
+M	М	0
+m	м	0
+N	Н	0
+n	н	0
+N'	Нь	0
+n'	нь	0
+N'	Њ	0
+n'	њ	0
+Ň	Нь	0
+ň	нь	0
+Ň	Њ	0
+ň	њ	0
+Ń	Нь	0
+ń	нь	0
+Ń	Њ	0
+ń	њ	0
+O	О	0
+o	о	0
+Jo	Йо	0
+jo	йо	0
+Jo	Јо	0
+jo	јо	0
+P	П	0
+p	п	0
+R	Р	0
+r	р	0
+Ř	Рь	0
+ř	рь	0
+S	С	0
+s	с	0
+Ś	Сь	0
+ś	сь	0
+T	Т	0
+t	т	0
+Ť	Ть	0
+ť	ть	0
+Ć	Ћ	0
+ć	ћ	0
+C`	Ћ	0
+c`	ћ	0
+Ć	Ќ	0
+ć	ќ	0
+C`	Ќ	0
+c`	ќ	0
+U	У	0
+u	у	0
+Ju	Ю	0
+ju	ю	0
+|O	Ю	0
+|o	ю	0
+Ų	Ѫ	0
+ų	ѫ	0
+Ą	Ѫ	0
+ą	ѫ	0
+Ǫ	Ѫ	0
+ǫ	ѫ	0
+U~	Ѫ	0
+u~	ѫ	0
+O~	Ѫ	0
+o~	ѫ	0
+Jų	Ѭ	0
+jų	ѭ	0
+Ją	Ѭ	0
+ją	ѭ	0
+Jǫ	Ѭ	0
+jǫ	ѭ	0
+Ju~	Ѭ	0
+ju~	ѭ	0
+Jo~	Ѭ	0
+jo~	ѭ	0
+W	Ў	0
+w	ў	0
+Ou	оу	0
+ou	оу	0
+Ou`	Ѹ	0
+ou`	ѹ	0
+Ou`	Ꙋ	0
+ou`	ꙋ	0
+F	Ф	0
+f	ф	0
+H	Х	0
+h	х	0
+X	Х	0
+x	х	0
+Ch	Х	0
+ch	х	0
+C	Ц	0
+c	ц	0
+C.	Ц	0
+c.	ц	0
+Č	Ч	0
+č	ч	0
+Cz	Ч	0
+cz	ч	0
+Cx	Ч	0
+cx	ч	0
+Dž	Дж	0
+dž	дж	0
+Dż	Дж	0
+dż	дж	0
+Dzs	Дж	0
+dzs	дж	0
+Dzx	Дж	0
+dzx	дж	0
+Dž`	Џ	0
+dž`	џ	0
+Dż`	Џ	0
+dż`	џ	0
+Dzs`	Џ	0
+dzs`	џ	0
+Dzx`	Џ	0
+dzx`	џ	0
+Š	Ш	0
+š	ш	0
+Sz	Ш	0
+sz	ш	0
+Sx	Ш	0
+sx	ш	0
+Š.	Ш	0
+š.	ш	0
+Sz.	Ш	0
+sz.	ш	0
+Sx.	Ш	0
+sx.	ш	0
+Šč	Щ	0
+šč	щ	0
+Szcz	Щ	0
+szcz	щ	0
+Sxcx	Щ	0
+sxcx	щ	0
+""	Ъ	0
+"	ъ	0
+"	"	0
+Y	Ы	0
+y	ы	0
+Y`	Ꙑ	0
+y`	ꙑ	0
+''	Ь	0
+'	ь	0
+'	'	0
+.	.	0
+~	~	0
+`	`	0
+|	|	0
+END_TABlE
+
+### Since some input methods use different table for every character to make
+### phrase, such as ZhengMa, they need explict define the goucima (the
+### phrase-building code for the given character), the format of every entry is
+### "character\tgoucima\n". 
+### For the input method which just use the full code as word-building code
+### just skip this field. The ibus-table will build the codes needed from
+### above TABLE.
+### if you don't need different word-building code, please comment out the
+### next few lines with ###, just like these lines you are look at now.
+### BEGIN_GOUCI
+### character_1	goucima_1
+### character_1	goucima_2
+### END_GOUCI
